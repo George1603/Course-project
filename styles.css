@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    background-color: #4d86f1;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  
+.dateInputs:invalid + span {
+    position: relative;
+}
+  
+.dateInputs:invalid + span:after {
+    content: "✖";
+    position: absolute;
+    right: -18px;
+}
+  
+.dateInputs:valid + span {
+    position: relative;
+}
+  
+.dateInputs:valid + span:after {
+    content: "✓";
+    position: absolute;
+    right: -18px;
+}
+
+.tabs {
+    max-width: 720px;
+    margin: 50px auto;
+}
+
+.tabs__nav {
+    display: flex;
+    justify-content: space-around;    
+    margin-bottom: 15px;
+}
+
+.tabs__nav-btn {
+    padding: 15px 20px;
+    min-width: 120px;
+    font-size: 20px;
+
+    background-color: #f5f5f5;
+    border: 0;
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.tabs__nav-btn:last-child {
+    border-right: none;
+}
+
+.tabs__nav-btn:hover {
+    background-color: #ddd;
+}
+
+.tabs__nav-btn.active {
+    background-color: #5e3ddf;
+    border-right-color: #5e3ddf;
+    color: #fff;
+}
+
+.tabs__content {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.tabs__item {
+    display: none;
+}
+
+.tabs__item.active {
+    display: block;
+}
+
+.resultTable {
+    width: 100%;
+}
+
+.book-list {
+    text-align: center;
+}
+
+/* .tableHeader {
+    width: 33%;
+} */
+
+.btnWrapper {
+    text-align: center;
+}
+
+.btnWrapper button {
+    margin: 10px 0;
+    color: white;
+    background: #4c57ed;
+    border: 1.5px solid #ebde2c;
+    height: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 0;
+    letter-spacing: 0em;
+    padding: 17px 34px;
+}
+.btnWrapper button:hover {
+    transform: scale(1.1);
+	transition: 0.3s;
+}
+
+.tabs__item form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.standartInputStyle {
+    height: 25px;
+    border-radius: 6px;    
+    border: 1px solid #333333;
+    cursor: pointer;
+}
+
+.dateInputs {
+    width: 100px;
+}
