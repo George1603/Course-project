@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tabs__nav">
+            <button class="tabs__nav-btn" type="button" data-tab="#tab_1" id="tab_1_btn">Count the time</button>
+            <button class="tabs__nav-btn" type="button" data-tab="#tab_2" id="tab_2_btn">Get a list of holidays</button>            
+        </div>
+        <div class="tabs__content mediaTab1">
+            <div class="tabs__item" id="tab_1">
+                <form>
+                  <div class="startDatePicker pickersMenuTab1">
+                    <label for="startDay">Choose a start date:</label>
+                    <input type="date" id="startDay" class="standartInputStyle dateInputs" name="startDay" required />
+                    <span class="validity"></span>
+                  </div>
+                  <div class="endDatePicker pickersMenuTab1">
+                    <label for="endDay">Choose an end date:</label>
+                    <input type="date" id="endDay" class="standartInputStyle dateInputs" name="endDay" required />
+                    <span class="validity"></span>
+                  </div>
+                  <div class="presetPicker pickersMenuTab1">
+                    <label for="preset">Choose a standard preset as needed:</label>
+                      <select id="preset" class="standartInputStyle">
+                        <option value="">Select a preset</option>
+                        <option value="6">Week (7 days)</option>
+                        <option value="29">Month (30 days)</option>
+                      </select>                                          
+                  </div>
+                  <div class="typeOfDays pickersMenuTab1">
+                    <label for="dayOptions">If necessary, select the type of days to count:</label>
+                      <select id="dayOptions" class="standartInputStyle">
+                        <option value="All days">All days</option>
+                        <option value="Working days">Working days</option>
+                        <option value="Weekend">Weekend</option>
+                      </select>
+                  </div>
+                  <div class="typeOfCalc pickersMenuTab1">
+                    <label for="calcOptions">Select the type of time calculation:</label>
+                      <select id="calcOptions" class="standartInputStyle">
+                        <option value="days">Count the number of days</option>
+                        <option value="hours">Calculate the number of hours</option>
+                        <option value="minutes">Count the number of minutes</option>
+                        <option value="seconds">Count number of seconds</option>
+                      </select>
+                  </div>
+                  <div class="btnWrapper calcBTN">
+                    <button>Calculate</button>
+                  </div>
+                </form>
+                <table class="resultTable">
+                  <thead>
+                  <tr>
+                    <th class="tableHeader specificThBorder">Start date</th>
+                    <th class="tableHeader specificThBorder">End date</th>
+                    <th class="tableHeader specificThBorder">Result</th>
+                    <th class="tableHeader specificThBorder">Type of calculation</th>                    
+                  </tr>
+                  </thead>
+                  <tbody class="book-list"></tbody>
+                </table>
+                <div class="btnWrapper deleteAllResults">
+                  <button>Delete all results</button>
+                </div>                
+            </div>
+            <div class="tabs__item mediaTab2" id="tab_2">   
+              <div class="tab_2_flex">          
+                <form>
+                  <div class="countryPicker">
+                    <label for="countryPicker">Choose a country:</label>
+                    <select id="countryOption" class="standartInputStyle">
+                      <option value="defaultCountryInput">Choose a country</option>
+                    </select>
+                  </div>
+                  <div class="yearPicker">
+                    <label for="yearOption">Choose a year:</label>
+                    <select id="yearOptionInput" class="standartInputStyle">                      
+                    </select>
+                  </div>
+                  <div class="getHolidaysBTN btnWrapper">
+                    <button>Get a list of holidays</button>
+                  </div>                  
+                </form>                
+                <table class="holidaysTable">
+                  <thead>
+                  <tr>
+                    <th class="tableHeader" id="tableSortDateWrapper">Date<button id="sortDateBtn">Sort</button></th>
+                    <th class="tableHeader specificThBorder">The name of the holiday</th>                                        
+                  </tr>
+                  </thead>
+                  <tbody class="holidays-list"></tbody>
+                </table>
+              </div>   
+            </div>
+        </div>
+    </div>   
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
